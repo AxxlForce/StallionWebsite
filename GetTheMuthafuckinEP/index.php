@@ -74,7 +74,7 @@
 
             <div style="padding-top: 50%">
 
-                <h2>Total Dowloads: <?php echo readFromFile()?></h2>
+                <h2>Total Downloads: <?php echo readFromFile()?></h2>
 
             </div>
         </div>

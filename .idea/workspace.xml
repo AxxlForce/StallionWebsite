@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9dd4c245-5350-4494-a035-353ae9e61843" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GetTheMuthafuckinEP/img/Text_1_465x26.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GetTheMuthafuckinEP/img/Text_2_465x26.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GetTheMuthafuckinEP/img/pic_600x694.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GetTheMuthafuckinEP/img/strich_1920x30.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GetTheMuthafuckinEP/img/strich_1x30.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GetTheMuthafuckinEP/index.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GetTheMuthafuckinEP/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ExternalFrameworks/jquery/jquery-2.0.1.min.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GetTheMuthafuckinEP/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/counter.dat" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GetTheMuthafuckinEP/script.php" afterPath="$PROJECT_DIR$/GetTheMuthafuckinEP/script.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GetTheMuthafuckinEP/thanks.html" afterPath="$PROJECT_DIR$/GetTheMuthafuckinEP/thanks.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GetTheMuthafuckinEP/index.php" afterPath="$PROJECT_DIR$/GetTheMuthafuckinEP/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="StallionWebsite.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -21,7 +11,7 @@
     <file path="/index.html" changelist="9dd4c245-5350-4494-a035-353ae9e61843" time="1378847569555" ignored="false" />
     <file path="/App.css" changelist="9dd4c245-5350-4494-a035-353ae9e61843" time="1378845507153" ignored="false" />
     <file path="/expect_deploy.sh" changelist="9dd4c245-5350-4494-a035-353ae9e61843" time="1378846090934" ignored="false" />
-    <file path="/index.php" changelist="9dd4c245-5350-4494-a035-353ae9e61843" time="1378848514240" ignored="false" />
+    <file path="/index.php" changelist="9dd4c245-5350-4494-a035-353ae9e61843" time="1378849159716" ignored="false" />
     <file path="/script.php" changelist="9dd4c245-5350-4494-a035-353ae9e61843" time="1378847947652" ignored="false" />
     <file path="/thanks.html" changelist="9dd4c245-5350-4494-a035-353ae9e61843" time="1378848704838" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,10 +33,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GetTheMuthafuckinEP/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="85" selection-start="840" selection-end="840" vertical-scroll-proportion="0.0">
+            <state line="76" column="30" selection-start="2014" selection-end="2014" vertical-scroll-proportion="0.64790577">
               <folding />
             </state>
           </provider>
@@ -61,10 +51,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="thanks.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="thanks.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GetTheMuthafuckinEP/thanks.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="33" selection-start="232" selection-end="232" vertical-scroll-proportion="0.16216215">
+            <state line="17" column="145" selection-start="456" selection-end="456" vertical-scroll-proportion="-10.625">
               <folding />
             </state>
           </provider>
@@ -104,8 +94,8 @@
         <option value="$PROJECT_DIR$/GetTheMuthafuckinEP/index.css" />
         <option value="$PROJECT_DIR$/GetTheMuthafuckinEP/index.html" />
         <option value="$PROJECT_DIR$/GetTheMuthafuckinEP/script.php" />
-        <option value="$PROJECT_DIR$/GetTheMuthafuckinEP/index.php" />
         <option value="$PROJECT_DIR$/GetTheMuthafuckinEP/thanks.html" />
+        <option value="$PROJECT_DIR$/GetTheMuthafuckinEP/index.php" />
       </list>
     </option>
   </component>
@@ -141,7 +131,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -176,6 +165,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -253,12 +243,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="-720" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24982357" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17923036" sideWeight="0.825" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17923036" sideWeight="0.825" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.175" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -378,13 +368,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GetTheMuthafuckinEP/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="85" selection-start="840" selection-end="840" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/GetTheMuthafuckinEP/script.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="0" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
@@ -394,7 +377,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GetTheMuthafuckinEP/thanks.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="33" selection-start="232" selection-end="232" vertical-scroll-proportion="0.16216215">
+        <state line="17" column="145" selection-start="456" selection-end="456" vertical-scroll-proportion="-10.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GetTheMuthafuckinEP/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="30" selection-start="2014" selection-end="2014" vertical-scroll-proportion="0.64790577">
           <folding />
         </state>
       </provider>
