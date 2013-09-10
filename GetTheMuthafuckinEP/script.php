@@ -6,19 +6,19 @@
 if(isset($_POST['nw_update']))
 {
 	incrementCounter();
+
+	redirect("thanks.html");
+
+	die();
 }
 
 function incrementCounter() 
 {
-	redirect("thanks.html");
-
 	// $value = readValue();
 	// writeValue(1);
 
 	$incrementedValue = readFromFile() + 1;
 	writeToFile($incrementedValue);
-
-	die();
 }
 
 function readFromFile()

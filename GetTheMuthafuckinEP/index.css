@@ -1,0 +1,30 @@
+/**
+ * List used for the demo page
+ */
+
+body {
+    font-family: 'Stardos Stencil', cursive;
+    color: rgb(226,0,21);
+    background-color: white;
+}
+
+a:link{
+    color:rgb(226,0,21);
+}
+a:visited{
+    color:rgb(226,0,21);
+}
+a:hover{
+    color:rgb(226,0,21);
+}
+a:focus{
+    color:rgb(226,0,21);
+}
+a:active{
+    color:rgb(226,0,21);
+}
+
+.col{
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
