@@ -8,11 +8,42 @@
     <!--redirect to download link-->
     <meta http-equiv="refresh" content="0; url=http://dl.dropboxusercontent.com/u/8656454/Mixdown/Demo/StallionDemo2013.zip">
 
-    <!--user css-->
+    <!--user css for font-->
     <link rel="stylesheet" href="index.css">
+
+    <!--jQuery-->
+    <script src="../ExternalFrameworks/jquery/jquery-2.0.1.min.js"></script>
+
+    <script type="text/javascript">
+        window.setTimeout(function ()
+        {
+            window.location.href = "http://www.heavymetalstallion.com/GetTheMuthafuckinEP/";
+        }, 10000);
+
+        function resizeHandler()
+        {
+            var div = $(".row-fluid");
+            var screenHeight = $(window).height();
+
+            $(div).css("padding", (screenHeight / 2.3).toString() );
+        }
+
+        $(document).ready(resizeHandler);
+        $(window).resize(resizeHandler);
+
+    </script>
 
 </head>
 <body>
-	<h2>thanks for downloading!</h2>
+
+<div class="container-fluid">
+
+    <div class="row-fluid">
+
+        <h1 align="center">thanks for downloading!</h1>
+
+    </div>
+</div>
+
 </body>
 </html>
