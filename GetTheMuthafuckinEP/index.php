@@ -17,7 +17,7 @@
     <script src="../ExternalFrameworks/bootstrap/js/bootstrap.js"></script>
 
     <!--user css-->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../StallionMain.css">
 
     <!--submit script-->
     <script type="text/javascript">
