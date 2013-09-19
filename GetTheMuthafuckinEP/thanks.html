@@ -15,6 +15,7 @@
     <script src="../ExternalFrameworks/jquery/jquery-2.0.1.min.js"></script>
 
     <script type="text/javascript">
+
         window.setTimeout(function ()
         {
             window.location.href = "http://www.heavymetalstallion.com/GetTheMuthafuckinEP/";
@@ -24,8 +25,6 @@
         {
             var div = $(".row-fluid");
             var screenHeight = $(window).height();
-
-            $(div).css("padding", (screenHeight / 2.3).toString() );
         }
 
         $(document).ready(resizeHandler);
@@ -40,7 +39,7 @@
 
     <div class="row-fluid">
 
-        <h1 align="center">thanks for downloading!</h1>
+        <h1 align="center" style="width: 100%; position: absolute; top: 50%;">thanks for downloading!</h1>
 
     </div>
 </div>
