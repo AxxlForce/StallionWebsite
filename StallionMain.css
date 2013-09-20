@@ -2,7 +2,7 @@ body
 {
     /* font style for all text */
     font-family: 'Stardos Stencil', cursive;
-    color: rgb(226, 0, 21);
+    color: rgb(254, 0, 0);
     background-color: white;
 }
 
@@ -17,27 +17,27 @@ body
 
 a:link
 {
-    color: rgb(226, 0, 21);
+    color: rgb(254, 0, 0);
 }
 
 a:visited
 {
-    color: rgb(226, 0, 21);
+    color: rgb(254, 0, 0);
 }
 
 a:hover
 {
-    color: rgb(226, 0, 21);
+    color: rgb(254, 0, 0);
 }
 
 a:focus
 {
-    color: rgb(226, 0, 21);
+    color: rgb(254, 0, 0);
 }
 
 a:active
 {
-    color: rgb(226, 0, 21);
+    color: rgb(254, 0, 0);
 }
 
 .col
