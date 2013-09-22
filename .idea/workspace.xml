@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9dd4c245-5350-4494-a035-353ae9e61843" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GetTheMuthafuckinEP/img/fu.jpg" />
+    <list default="true" id="9dd4c245-5350-4494-a035-353ae9e61843" name="Default" comment="implemented &quot;under construction&quot; page, fixed missing bootstrap includes, disable download link">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/title.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GetTheMuthafuckinEP/thanks.html" afterPath="$PROJECT_DIR$/GetTheMuthafuckinEP/thanks.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="StallionWebsite.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="9dd4c245-5350-4494-a035-353ae9e61843" time="1379797246969" ignored="false" />
-    <file path="/index.html" changelist="9dd4c245-5350-4494-a035-353ae9e61843" time="1379698219839" ignored="false" />
+    <file path="/Dummy.txt" changelist="9dd4c245-5350-4494-a035-353ae9e61843" time="1379863468832" ignored="false" />
+    <file path="/index.html" changelist="9dd4c245-5350-4494-a035-353ae9e61843" time="1379863331609" ignored="false" />
     <file path="/App.css" changelist="9dd4c245-5350-4494-a035-353ae9e61843" time="1378845507153" ignored="false" />
     <file path="/expect_deploy.sh" changelist="9dd4c245-5350-4494-a035-353ae9e61843" time="1378846090934" ignored="false" />
     <file path="/index.php" changelist="9dd4c245-5350-4494-a035-353ae9e61843" time="1379597503267" ignored="false" />
     <file path="/script.php" changelist="9dd4c245-5350-4494-a035-353ae9e61843" time="1378847947652" ignored="false" />
-    <file path="/thanks.html" changelist="9dd4c245-5350-4494-a035-353ae9e61843" time="1379798056252" ignored="false" />
+    <file path="/thanks.html" changelist="9dd4c245-5350-4494-a035-353ae9e61843" time="1379863364089" ignored="false" />
     <file path="/fileIO.php" changelist="9dd4c245-5350-4494-a035-353ae9e61843" time="1378998132971" ignored="false" />
     <file path="/index.css" changelist="9dd4c245-5350-4494-a035-353ae9e61843" time="1378995797262" ignored="false" />
     <file path="/a.js" changelist="9dd4c245-5350-4494-a035-353ae9e61843" time="1378995948600" ignored="false" />
@@ -40,16 +41,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="thanks.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="thanks.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GetTheMuthafuckinEP/thanks.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="55" selection-start="1004" selection-end="1004" vertical-scroll-proportion="-17.458334">
+            <state line="26" column="18" selection-start="942" selection-end="942" vertical-scroll-proportion="0.38352272">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fu.jpg" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="45" selection-start="846" selection-end="846" vertical-scroll-proportion="-16.25">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fu.jpg" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GetTheMuthafuckinEP/img/fu.jpg">
           <provider selected="true" editor-type-id="images">
             <state />
@@ -59,10 +69,8 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GetTheMuthafuckinEP/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="4" selection-start="3075" selection-end="3172" vertical-scroll-proportion="-5.6666665">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="27" column="71" selection-start="902" selection-end="902" vertical-scroll-proportion="-16.875">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -103,7 +111,6 @@
       <list>
         <option value="$PROJECT_DIR$/App.css" />
         <option value="$PROJECT_DIR$/expect_deploy.sh" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/deploy.sh" />
         <option value="$PROJECT_DIR$/GetTheMuthafuckinEP/fileIO.php" />
         <option value="$PROJECT_DIR$/GetTheMuthafuckinEP/script.php" />
@@ -112,6 +119,7 @@
         <option value="$PROJECT_DIR$/GetTheMuthafuckinEP/index.php" />
         <option value="$PROJECT_DIR$/StallionMain.css" />
         <option value="$PROJECT_DIR$/GetTheMuthafuckinEP/index.html" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/GetTheMuthafuckinEP/thanks.html" />
       </list>
     </option>
@@ -147,7 +155,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -194,20 +201,52 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StallionWebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StallionWebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StallionWebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StallionWebsite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GetTheMuthafuckinEP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="File.Encoding" />
+    <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/img" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/GetTheMuthafuckinEP/img" />
       <recent name="$PROJECT_DIR$/GetTheMuthafuckinEP" />
@@ -283,17 +322,21 @@
       <created>1379698314437</created>
       <updated>1379698314437</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added image on thanks page">
+      <created>1379798519880</created>
+      <updated>1379798519880</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24982357" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17854622" sideWeight="0.825" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17854622" sideWeight="0.825" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1745531" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -351,7 +394,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed rgb color values" />
+    <option name="LAST_COMMIT_MESSAGE" value="implemented &quot;under construction&quot; page, fixed missing bootstrap includes, disable download link" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -369,6 +412,8 @@
     <MESSAGE value="added paypal donate button on download site" />
     <MESSAGE value="vertically centering of thanks message improved for low resolutions" />
     <MESSAGE value="fixed rgb color values" />
+    <MESSAGE value="added image on thanks page" />
+    <MESSAGE value="implemented &quot;under construction&quot; page, fixed missing bootstrap includes, disable download link" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -398,11 +443,6 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="69" selection-start="872" selection-end="872" vertical-scroll-proportion="-5.2" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/deploy.sh">
@@ -447,25 +487,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/GetTheMuthafuckinEP/img/fu.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/GetTheMuthafuckinEP/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="4" selection-start="3075" selection-end="3172" vertical-scroll-proportion="-5.6666665">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="27" column="71" selection-start="902" selection-end="902" vertical-scroll-proportion="-16.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="45" selection-start="846" selection-end="846" vertical-scroll-proportion="-16.25">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GetTheMuthafuckinEP/thanks.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="55" selection-start="1004" selection-end="1004" vertical-scroll-proportion="-17.458334">
+        <state line="26" column="18" selection-start="942" selection-end="942" vertical-scroll-proportion="0.38352272">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GetTheMuthafuckinEP/img/fu.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
   </component>

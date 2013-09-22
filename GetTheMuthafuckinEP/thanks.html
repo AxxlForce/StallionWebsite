@@ -2,34 +2,29 @@
 <html>
 <head>
 
+    <!--redirect to download link-->
+    <!--<meta http-equiv="refresh" content="0; url=INSERT_LINK_HERE">-->
+
     <!--font-->
     <link href='http://fonts.googleapis.com/css?family=Stardos+Stencil:400,700' rel='stylesheet' type='text/css'>
 
-    <!--redirect to download link-->
-    <meta http-equiv="refresh" content="0; url=http://dl.dropboxusercontent.com/u/8656454/Mixdown/Demo/StallionDemo2013.zip">
+    <!--jQuery-->
+    <script src="ExternalFrameworks/jquery/jquery-2.0.1.min.js"></script>
+
+    <!--bootstrap-->
+    <link rel="stylesheet" href="ExternalFrameworks/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="ExternalFrameworks/bootstrap/css/bootstrap-responsive.css">
+    <script src="ExternalFrameworks/bootstrap/js/bootstrap.js"></script>
 
     <!--user css for font-->
     <link rel="stylesheet" href="../StallionMain.css">
 
-    <!--jQuery-->
-    <script src="../ExternalFrameworks/jquery/jquery-2.0.1.min.js"></script>
-
+    <!--timed redirect-->
     <script type="text/javascript">
-
         window.setTimeout(function ()
         {
             window.location.href = "http://www.heavymetalstallion.com/GetTheMuthafuckinEP/";
         }, 10000);
-
-        function resizeHandler()
-        {
-            var div = $(".row-fluid");
-            var screenHeight = $(window).height();
-        }
-
-        $(document).ready(resizeHandler);
-        $(window).resize(resizeHandler);
-
     </script>
 
 </head>
@@ -45,7 +40,11 @@
             <img src="img/fu.jpg">
         </div>
 
-        <h1 align="center">thanks for downloading!</h1>
+        <div class="row-fluid">
+
+            <h1 align="center">thanks for downloading!</h1>
+
+        </div>
 
     </div>
 
