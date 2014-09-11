@@ -18,6 +18,35 @@
     <!--user css for font-->
     <link rel="stylesheet" href="StallionMain.css">
 
+    <script>
+
+    /*
+    *   get the actual tour dates from bandsintown via JSON
+    */
+    $.getJSON("http://api.bandsintown.com/artists/stallion/events.json?callback=?&app_id=stallion", function(result) 
+    {
+    	// clear content
+    	$("#tourDateContainer").html("");
+
+        $.each(result, function(key, val) 
+        {
+            // retrieve
+            var date = new Date(val.datetime);
+            var dateString = date.toISOString().slice(0,10); 
+            var country = val.venue.country;
+            var city = val.venue.city ;
+            var venue = val.venue.name;
+
+            // compose
+            var contentString = dateString + " " + country.toUpperCase() + " " + city + ", " + venue;
+
+            // write to div
+            $("#tourDateContainer").append(contentString + "<br>");
+        }); 
+    }); 
+
+    </script>
+
 </head>
 <body>
 
@@ -25,60 +54,26 @@
 
         <br>
 
+        <!-- header -->
         <h1 align="center" class="row-fluid">
             Stallion Tour Dates 2014    
         </h1>
 
+        <!-- band photo -->
         <div align="center">
             <a href="http://www.metal-archives.com/bands/Stallion/3540367297"><img src="img/title.jpg" width="300" heigth="300"></a>
         </div>
 
+        <!-- links -->
         <h4 align="center" class="row-fluid">
             <a href="http://www.metal-archives.com/bands/Stallion/3540367297"><br>"The Metal Archives" for band information<br></a>
             <a href="http://www.heavymetalstallion.com/Facebook">Facebook<br></a>
             <a href="http://www.heavymetalstallion.com/Store">Merch Store</a>
         </h4>
 
+        <!-- content: tour dates -->
         <div align="center" class="row-fluid">
-
-            <h3 align="center" style="display: inline-block;text-align: left;">
-                08.02.14 D Würzburg, Posthalle <br>
-                28.02.14 D Hamburg, Rockcafé St.Pauli <br>
-                11.04.14 D Oberursel, Taunus Metal Open Air <br>
-                12.04.14 D Tilburg, Little Devil <br>
-                24.04.14 D Dornbirn, Schlachthaus <br>
-                25.04.14 D Lauda Königshofen, Keep It True Festival <br>
-                09.05.14 D Oberndorf, Metalheadz Open Air <br>
-                18.07.14 D Pößneck, Hells Pleasure Festival <br>
-                18.09.14 D Osnabrück, Bastard Club <br>
-                19.09.14 D Wiesau, Storm Crusher Festival <br>
-                20.09.14 D München, Backstage <br>
-                21.09.14 ITA Milano, Barrio's Club <br>
-                22.09.14 CH Zürich, Komplex Club <br>
-                23.09.14 F Luynes, Aix Le Korigan <br>
-                24.09.14 ES Barcelona, Razzmatazz 3 <br>
-                25.09.14 ES Madrid, Sala Caracol <br>
-                26.09.14 ES Zaragoza, Centro Civico Dalicias <br>
-                27.09.14 ES Zaragoza, La Casa del Loco <br>
-                28.09.14 ES Bilbao, Sala Sonora <br>
-                29.09.14 F Paris, Glazert  <br>
-                30.09.14 BE Antwerpen, Kavka <br>
-                01.10.14 NL Tilburg, Little Devil <br>
-                02.10.14 D Stuttgart, Cann <br>
-                03.10.14 D Siegburg, Kubana <br>
-                04.10.14 D Bochum, Matrix <br>
-                05.10.14 D Frankfurt, Nachtleben <br>
-                06.10.14 CZ Prag, Storm Club <br>
-                07.10.14 AT Wien, Escape <br>
-                08.10.14 D Erfurt, From Hell <br>
-                09.10.14 D Berlin, K17 <br>
-                10.10.14 D Hamburg, Markhalle <br>
-                11.10.14 D Dittigheim, Sporthalle <br>
-                12.10.14 D Lindau, Vaudeville <br>
-                23.01.15 D Leipzig, Hellraiser <br>
-                24.01.15 D Essen, Turock <br>
-            </h3>
-
+            <h3 align="center" id="tourDateContainer" style="display: inline-block;text-align: left;">loading tour dates...</h3>
         </div>
 
     </div>
