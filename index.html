@@ -1,8 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
 
-    <meta charset="utf-8"> 
+    <title>Stallion (Official) Website</title>
+
+    <meta charset="utf-8">
 
     <!--font-->
     <link href='http://fonts.googleapis.com/css?family=Stardos+Stencil:400,700' rel='stylesheet' type='text/css'>
@@ -20,65 +22,128 @@
 
     <script>
 
-    /*
-    *   get the actual tour dates from bandsintown via JSON
-    */
-    $.getJSON("http://api.bandsintown.com/artists/stallion/events.json?callback=?&app_id=stallion", function(result) 
-    {
-    	// clear content
-    	$("#tourDateContainer").html("");
+        /**
+         * some helper functions
+         */
+        function startsWith(givenString, prefix) {
+            return givenString.lastIndexOf(prefix, 0) === 0;
+        }
 
-        $.each(result, function(key, val) 
-        {
-            // retrieve
-            var date = new Date(val.datetime);
-            var dateString = date.toISOString().slice(0,10); 
-            var country = val.venue.country;
-            var city = val.venue.city ;
-            var venue = val.venue.name;
+        function removeFirstNCharacters(givenString, n) {
+            return givenString.substring(n);
+        }
 
-            // compose
-            var contentString = dateString + " " + country.toUpperCase() + " " + city + ", " + venue;
+        function getCountryFromLocation(location) {
+            return location.split(",")[1];
+        }
 
-            // write to div
-            $("#tourDateContainer").append(contentString + "<br>");
-        }); 
-    }); 
+        function getCityFromLocation(location) {
+            return location.split(",")[0];
+        }
+
+        /**
+         * parsing data from google API response
+         */
+        function onEventsReceived(events) {
+
+            var htmlContainer = $("#tourDateContainer").empty();
+
+            if (events.length > 0) {
+
+                htmlContainer.empty();
+
+                for (var i = 0; i < events.length; i++) {
+
+                    var event = events[i];
+
+                    var eventName = event.summary;
+                    var location = event.location;
+                    var date = new Date(Date.now());
+
+                    if (eventName) {
+
+                        if (startsWith(eventName, "FIX:") === true) {
+
+                            var formattedVenue = removeFirstNCharacters(eventName, 4).trim();
+                            //var formatteDate = date.toISOString().slice(0, 10).trim();
+                            var formatteDate = "";
+                            var formattedCountry = getCountryFromLocation(location).trim();
+                            var formattedCity = getCityFromLocation(location).trim();
+
+                            var contentString = formatteDate + " " + formattedCountry.toUpperCase() + " " + formattedCity + ", " + formattedVenue;
+
+                            // write to div
+                            htmlContainer.append(contentString + "<br>");
+                        }
+                    }
+                }
+            }
+        }
+
+        /**
+         * get event from google calendar via PHP and service account
+         */
+        function loadGoogleCalendarEventsViaPHP() {
+
+
+            $.post(
+                'get-data.php',
+                function (result) {
+                    onEventsReceived(result)
+                },
+                'json'
+            );
+        }
+
+        // let's do it
+        loadGoogleCalendarEventsViaPHP();
 
     </script>
 
 </head>
+
 <body>
 
-    <div class="container-fluid">
+<div class="container-fluid">
 
-        <br>
+    <br>
 
-        <!-- header -->
-        <h1 align="center" class="row-fluid">
-            Stallion Tour Dates    
-        </h1>
+    <!-- header -->
+    <h1 align="center" class="row-fluid">
+        Stallion Information
+    </h1>
 
-        <!-- band photo -->
-        <div align="center">
-            <a href="http://www.metal-archives.com/bands/Stallion/3540367297"><img src="img/title.jpg" width="300" heigth="300"></a>
-        </div>
-
-        <!-- links -->
-        <h4 align="center" class="row-fluid">
-        	please visit:<br>
-            <a href="http://www.metal-archives.com/bands/Stallion/3540367297">"The Metal Archives" for band information<br></a>
-            <a href="http://www.heavymetalstallion.com/Youtube">official Youtube channel<br></a>
-            <a href="http://www.heavymetalstallion.com/Facebook">Facebook<br></a>
-            <a href="http://www.heavymetalstallion.com/Store">merch store</a>
-        </h4>
-
-        <!-- content: tour dates -->
-        <div align="center" class="row-fluid">
-            <h3 align="center" id="tourDateContainer" style="display: inline-block;text-align: left;">loading tour dates...</h3>
-        </div>
-
+    <!-- band photo -->
+    <div align="center">
+        <a href="http://www.metal-archives.com/bands/Stallion/3540367297">
+            <img src="img/title.jpg" width="300" height="300">
+        </a>
     </div>
+
+    <!-- links -->
+    <h4 align="center" class="row-fluid">
+        please visit:<br>
+        <a href="http://www.metal-archives.com/bands/Stallion/3540367297">"The Metal Archives" for band information</a><br>
+        <a href="http://www.heavymetalstallion.com/Youtube">official Youtube channel</a><br>
+        <a href="http://www.heavymetalstallion.com/Facebook">Facebook</a><br>
+        <a href="http://www.heavymetalstallion.com/Store">merch store</a>
+    </h4>
+
+    <br>
+
+    <!-- sub header -->
+    <h2 align="center" class="row-fluid">
+        upcoming shows
+    </h2>
+
+    <!-- content: tour dates -->
+    <div align="center" class="row-fluid">
+        <h3 align="center" id="tourDateContainer" style="display: inline-block;text-align: left;">
+            loading tour dates...
+        </h3>
+    </div>
+
+</div>
 
 </body>
 </html>
