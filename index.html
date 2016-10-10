@@ -42,40 +42,52 @@
         }
 
         /**
-         * parsing data from google API response
+         * parse and format raw data into human readable string
+         */
+        function parseEventsToReadableString(events) {
+
+            var parsedData = [];
+
+            for (var i = 0; i < events.length; i++) {
+
+                var event = events[i];
+
+                var eventName = event.summary;
+                var location = event.location;
+                var date = new Date(event.startDate);
+
+                if (eventName) {
+
+                    if (startsWith(eventName, "FIX:") === true) {
+
+                        var formattedVenue = removeFirstNCharacters(eventName, 4).trim();
+                        var formattedDate = date.toISOString().slice(0, 10).trim();
+                        var formattedCountry = getCountryFromLocation(location).trim();
+                        var formattedCity = getCityFromLocation(location).trim();
+
+                        var contentString = formattedDate + " " + formattedCountry.toUpperCase() + " " + formattedCity + ", " + formattedVenue;
+                        parsedData.push(contentString);
+                    }
+                }
+            }
+
+            return parsedData;
+        }
+
+        /**
+         * php data arrived callback
          */
         function onEventsReceived(events) {
 
-            var htmlContainer = $("#tourDateContainer").empty();
+            var readableEvents = parseEventsToReadableString(events);
 
-            if (events.length > 0) {
+            if (readableEvents.length > 0) {
 
-                htmlContainer.empty();
+                var htmlContainer = $("#tourDateContainer").empty();
 
-                for (var i = 0; i < events.length; i++) {
+                for (var i = 0; i < readableEvents.length; i++) {
 
-                    var event = events[i];
-
-                    var eventName = event.summary;
-                    var location = event.location;
-                    var date = new Date(Date.now());
-
-                    if (eventName) {
-
-                        if (startsWith(eventName, "FIX:") === true) {
-
-                            var formattedVenue = removeFirstNCharacters(eventName, 4).trim();
-                            //var formatteDate = date.toISOString().slice(0, 10).trim();
-                            var formatteDate = "";
-                            var formattedCountry = getCountryFromLocation(location).trim();
-                            var formattedCity = getCityFromLocation(location).trim();
-
-                            var contentString = formatteDate + " " + formattedCountry.toUpperCase() + " " + formattedCity + ", " + formattedVenue;
-
-                            // write to div
-                            htmlContainer.append(contentString + "<br>");
-                        }
-                    }
+                    htmlContainer.append(readableEvents[i] + "<br>");
                 }
             }
         }
@@ -84,7 +96,6 @@
          * get event from google calendar via PHP and service account
          */
         function loadGoogleCalendarEventsViaPHP() {
-
 
             $.post(
                 'get-data.php',

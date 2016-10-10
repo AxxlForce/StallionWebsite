@@ -20,9 +20,23 @@
       'singleEvents' => TRUE,
       'orderBy' => 'startTime',
     );
-    $results = $service->events->listEvents($calendarId, $optParams);
-    $events = $results->getItems();
 
-    echo json_encode($events)
+    // of type Events.php
+    $events = $service->events;
+
+    // list of items of type Event.php
+    $eventItems = $events->listEvents($calendarId, $optParams)->getItems();
+
+    // compose an result object, we're only interested in summary, location and dateTime atm
+    // don't know if this is considered proper php code, works though
+    $result = array();
+    for ($i = 0; $i < count($eventItems); $i++)
+    {
+        $result[$i]->{summary} = $eventItems[$i]->getSummary();
+        $result[$i]->{location} = $eventItems[$i]->getLocation();
+        $result[$i]->{startDate} = $eventItems[$i]->getStart()->getDateTime();
+    }
+
+    echo json_encode($result);
 
 ?>
