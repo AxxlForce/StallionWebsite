@@ -25,49 +25,61 @@
         /**
          * some helper functions
          */
-        function startsWith(givenString, prefix) {
+        function startsWith(givenString, prefix)
+        {
             return givenString.lastIndexOf(prefix, 0) === 0;
         }
 
-        function removeFirstNCharacters(givenString, n) {
+        function removeFirstNCharacters(givenString, n)
+        {
             return givenString.substring(n);
         }
 
-        function getCountryFromLocation(location) {
+        function getCountryFromLocation(location)
+        {
             return location.split(",")[1];
         }
 
-        function getCityFromLocation(location) {
+        function getCityFromLocation(location)
+        {
             return location.split(",")[0];
         }
 
         /**
          * parse and format raw data into human readable string
          */
-        function parseEventsToReadableString(events) {
-
+        function parseEventsToReadableString(events)
+        {
             var parsedData = [];
 
-            for (var i = 0; i < events.length; i++) {
+            for (var i = 0; i < events.length; i++)
+            {
+                try
+                {
+                    var event = events[i];
 
-                var event = events[i];
+                    var eventName = event.summary;
+                    var location = event.location;
+                    var date = new Date(event.startDate);
 
-                var eventName = event.summary;
-                var location = event.location;
-                var date = new Date(event.startDate);
+                    if (eventName)
+                    {
+                        if (startsWith(eventName, "FIX:") === true)
+                        {
 
-                if (eventName) {
+                            var formattedVenue = removeFirstNCharacters(eventName, 4).trim();
+                            var formattedDate = date.toISOString().slice(0, 10).trim();
+                            var formattedCountry = getCountryFromLocation(location).trim();
+                            var formattedCity = getCityFromLocation(location).trim();
 
-                    if (startsWith(eventName, "FIX:") === true) {
-
-                        var formattedVenue = removeFirstNCharacters(eventName, 4).trim();
-                        var formattedDate = date.toISOString().slice(0, 10).trim();
-                        var formattedCountry = getCountryFromLocation(location).trim();
-                        var formattedCity = getCityFromLocation(location).trim();
-
-                        var contentString = formattedDate + " " + formattedCountry.toUpperCase() + " " + formattedCity + ", " + formattedVenue;
-                        parsedData.push(contentString);
+                            var contentString = formattedDate + " " + formattedCountry.toUpperCase() + " " + formattedCity + ", " + formattedVenue;
+                            parsedData.push(contentString);
+                        }
                     }
+                }
+                catch (e)
+                {
+                    console.log("unable to parse event " + event.summary + ", reason: " + e);
                 }
             }
 
@@ -77,15 +89,16 @@
         /**
          * php data arrived callback
          */
-        function onEventsReceived(events) {
-
+        function onEventsReceived(events)
+        {
             var readableEvents = parseEventsToReadableString(events);
 
-            if (readableEvents.length > 0) {
-
+            if (readableEvents.length > 0)
+            {
                 var htmlContainer = $("#tourDateContainer").empty();
 
-                for (var i = 0; i < readableEvents.length; i++) {
+                for (var i = 0; i < readableEvents.length; i++)
+                {
 
                     htmlContainer.append(readableEvents[i] + "<br>");
                 }
@@ -95,11 +108,12 @@
         /**
          * get event from google calendar via PHP and service account
          */
-        function loadGoogleCalendarEventsViaPHP() {
-
+        function loadGoogleCalendarEventsViaPHP()
+        {
             $.post(
                 'get-data.php',
                 function (result) {
+
                     onEventsReceived(result)
                 },
                 'json'
@@ -135,8 +149,9 @@
     <h4 align="center" class="row-fluid">
         please visit:<br><br>
         <a href="http://www.metal-archives.com/bands/Stallion/3540367297">"The Metal Archives" for band information</a><br>
-        <a href="http://de.wikipedia.org/wiki/Stallion_(Band)">Wikipedia article (german)</a><br>
+        <a href="http://de.wikipedia.org/wiki/Stallion_(Band)">Wikipedia article (german only)</a><br>
         <a href="http://www.heavymetalstallion.com/Youtube">official Youtube channel</a><br>
+        <a href="http://www.instagram.com/heavymetalstallion">Instagram</a><br>
         <a href="http://www.heavymetalstallion.com/Facebook">Facebook</a><br>
         <a href="http://www.heavymetalstallion.com/Store">merch store</a>
     </h4>
