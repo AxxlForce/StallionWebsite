@@ -5,10 +5,14 @@
     <title>Stallion (Official)</title>
 
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--font-->
     <link href='http://fonts.googleapis.com/css?family=Stardos+Stencil:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+
+    <!--jQuery-->
+    <script src="ExternalFrameworks/jquery/jquery-3.3.1.min.js"></script>
 
     <!--social media icons font-->
     <link rel="stylesheet" href="ExternalFrameworks/monosocialiconsfont/monosocialiconsfont.css">
@@ -68,7 +72,8 @@
                             var formattedCountry = getCountryFromLocation(location).trim();
                             var formattedCity = getCityFromLocation(location).trim();
 
-                            var contentString = formattedDate + " " + formattedCountry.toUpperCase() + " " + formattedCity + ", " + formattedVenue;
+                            // TODO styling via css
+                            var contentString = "<strong>" + formattedDate + "</strong> <em>" + formattedCountry.toUpperCase() + "</em> - " + formattedCity + ", " + formattedVenue;
                             parsedData.push(contentString);
                         }
                     }
@@ -96,7 +101,7 @@
                 for (var i = 0; i < readableEvents.length; i++)
                 {
 
-                    htmlContainer.append(readableEvents[i] + "<br>");
+                    htmlContainer.append("<br>" + readableEvents[i] + "<br>");
                 }
             }
         }
@@ -152,7 +157,7 @@
 
             <div>
                 <div class="heading">Contact & Booking</div>
-                <a href="mailto:emma@blackbirdartists.com" onclick="">info@heavymetalstallion.com</a>
+                <a href="mailto:info@heavymetalstallion.com" onclick="">info@heavymetalstallion.com</a>
             </div>
 
         </div>
@@ -226,12 +231,11 @@
     </div>
 
     <!-- tour dates content -->
-    <div align="center"
-         class="med-font">
+    <div align="center">
 
         <div align="center"
              id="tourDateContainer"
-             style="display: inline-block; text-align: left;">
+             class="tour-dates">
             loading tour dates...
         </div>
 

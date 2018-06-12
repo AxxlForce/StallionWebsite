@@ -34,9 +34,9 @@ a:active {
 .title {
 
     font-family: 'Stardos Stencil', cursive;
-    line-height: 40px;
+    line-height: 48px;
     font-weight: bold;
-    font-size: 56px;
+    font-size: 48px;
 }
 
 .med-font {
@@ -61,6 +61,7 @@ a:active {
 }
 
 .heading {
+
     line-height: 50px;
     font-weight: bold;
     font-size: 30px;
@@ -98,4 +99,19 @@ a:active {
 
     padding: 4px;
     font-size: 64px;
+}
+
+.tour-dates {
+
+    font-size: 28px;
+    display: inline-block;
+    text-align: left;
+}
+
+@media (max-width: 800px) {
+
+    .tour-dates {
+
+        text-align: center;
+    }
 }
