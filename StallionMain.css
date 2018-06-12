@@ -1,47 +1,101 @@
-body
-{
-    /* font style for all text */
-    font-family: 'Stardos Stencil', cursive;
+/* basic styling */
+body {
+
+    font-family: 'Ubuntu', cursive;
     color: rgb(254, 0, 0);
     background-color: white;
 }
 
-@media all and (max-width: 480px)
-{
-    .half
-    {
-        float: left !important;
-        width: 50% !important;
-    }
+/* font color overwrites */
+a:link {
+    color: rgb(254, 0, 0);
+    text-decoration: none
 }
 
-a:link
-{
+a:visited {
     color: rgb(254, 0, 0);
 }
 
-a:visited
-{
+a:hover {
     color: rgb(254, 0, 0);
 }
 
-a:hover
-{
+a:focus {
     color: rgb(254, 0, 0);
 }
 
-a:focus
-{
+a:active {
     color: rgb(254, 0, 0);
 }
 
-a:active
-{
-    color: rgb(254, 0, 0);
+/*****************************************************************
+ specific styling
+ ****************************************************************/
+.title {
+
+    font-family: 'Stardos Stencil', cursive;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 56px;
 }
 
-.col
-{
-    margin-bottom: -99999px;
-    padding-bottom: 99999px;
+.med-font {
+
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.upper-row {
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between
+}
+
+.band-photo {
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+    width: 300px;
+    height: 300px
+}
+
+.heading {
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.left-column {
+
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around
+}
+
+.unified-flex-size {
+
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.social-media-link-container {
+
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center
+}
+
+.social-media-link {
+
+    padding: 8px;
+    width: 64px;
+    height: 64px;
+}
+
+.social-media-link-mono-social-icons {
+
+    padding: 4px;
+    font-size: 64px;
 }
