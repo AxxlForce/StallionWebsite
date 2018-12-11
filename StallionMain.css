@@ -101,11 +101,30 @@ a:active {
     font-size: 64px;
 }
 
-.tour-dates {
+/*tour date container*/
+
+.year {
+
+    font-size: 36px;
+    font-weight: bold;
+    margin: 16px;
+}
+
+.event-heading {
 
     font-size: 28px;
-    display: inline-block;
-    text-align: left;
+}
+
+.event-description {
+
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+.fat {
+
+    font-size: 30px;
+    font-weight: bolder;
 }
 
 @media (max-width: 800px) {

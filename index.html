@@ -291,7 +291,12 @@
             'Åland Islands': 'AX'
         };
 
-        function parseDate(dateString)
+
+        /**
+         * some helper functions
+         */
+
+        function formatDate(dateString)
         {
             var shortened = new Date(dateString).toISOString().slice(0, 10).trim();
             var splits = shortened.split("-");
@@ -303,117 +308,55 @@
             return {year: year, date: month + " " + day};
         }
 
-        /**
-         * some helper functions
-         */
-        function startsWith(givenString, prefix)
+        function onSongkickEventsReceived(events)
         {
-            return givenString.lastIndexOf(prefix, 0) === 0;
-        }
+            var htmlContainer = $("#tourDateContainer").empty();
 
-        function removeFirstNCharacters(givenString, n)
-        {
-            return givenString.substring(n);
-        }
+            events.forEach(function (event) {
 
-        function getCountryFromLocation(location)
-        {
-            return location.split(",")[1].toUpperCase();
-        }
+                var eventName;
 
-        function getCityFromLocation(location)
-        {
-            return location.split(",")[0];
-        }
-
-
-        /**
-         * parse and format raw data into human readable string
-         */
-        function parseEventsToFormattedLines(events)
-        {
-            var parsedData = [];
-            var currentYear;
-
-            for (var i = 0; i < events.length; i++)
-            {
-                try
+                if (event.isFestival === true)
                 {
-                    var event = events[i];
-
-                    var eventName = event.summary;
-                    var location = event.location;
-
-                    var parsedDate = parseDate(event.startDate);
-
-                    if (eventName)
-                    {
-                        if (startsWith(eventName, "FIX:") === true)
-                        {
-                            // insert year
-                            if (parsedDate.year !== currentYear)
-                            {
-                                // TODO styling via css
-                                parsedData.push("<center>" + parsedDate.year + "</center>");
-                                currentYear = parsedDate.year;
-                            }
-
-                            var formattedVenue = removeFirstNCharacters(eventName, 4).trim();
-                            var formattedCountry = getCountryFromLocation(location).trim();
-                            var formattedCity = getCityFromLocation(location).trim();
-
-                            // TODO styling via css
-                            var contentString = parsedDate.date + " - <strong>" + formattedCity + ", " + formattedCountry + "</strong> - " + formattedVenue + "<br>";
-
-                            parsedData.push(contentString);
-                        }
-                    }
-                }
-                catch (e)
+                    eventName = event.festivalName;
+                    var description = event.venue;
+                } else
                 {
-                    console.log("unable to parse event " + event.summary + ", reason: " + e);
+                    eventName = event.venue;
                 }
-            }
 
-            return parsedData;
-        }
+                var contentString = "<div class='event-heading'>"
+                    + formatDate(event.date).date + " - "
+                    + "<span class='fat'>" + event.city + ", " + countryMap[event.country] + "</span>" + " - "
+                    + eventName
+                    + "</div>";
 
-        /**
-         * php data arrived callback
-         */
-        function onEventsReceived(events)
-        {
-            var readableEvents = parseEventsToFormattedLines(events);
+                // TODO can be activated
+                // if (description)
+                // {
+                //     contentString += "<div class='event-description'>" + description + "</div>";
+                // }
 
-            if (readableEvents.length > 0)
-            {
-                var htmlContainer = $("#tourDateContainer").empty();
-
-                for (var i = 0; i < readableEvents.length; i++)
-                {
-
-                    htmlContainer.append("<br>" + readableEvents[i]);
-                }
-            }
+                htmlContainer.append("<br>" + contentString);
+            });
         }
 
         /**
          * get event from google calendar via PHP and service account
          */
-        function loadGoogleCalendarEventsViaPHP()
+        function loadSongkickEvents()
         {
             $.post(
-                'get-data.php',
+                'get-songkick-data.php',
                 function (result) {
 
-                    onEventsReceived(result)
+                    onSongkickEventsReceived(result)
                 },
                 'json'
             );
         }
 
-        // let's do it
-        loadGoogleCalendarEventsViaPHP();
+        loadSongkickEvents();
 
     </script>
 
