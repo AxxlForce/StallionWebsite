@@ -291,7 +291,6 @@
             'Åland Islands': 'AX'
         };
 
-
         /**
          * some helper functions
          */
@@ -312,7 +311,29 @@
         {
             var htmlContainer = $("#tourDateContainer").empty();
 
-            events.forEach(function (event) {
+            var uniqueArray = [];
+
+            // filter out duplicate events
+            events.forEach(function (eventA) {
+
+                // check if an event on that day in that town is already existing
+                var foundDuplicate = uniqueArray.find(function (eventB) {
+
+                    return eventA.date === eventB.date && eventA.city === eventB.city;
+                });
+
+                // only add to uniqueArray if no duplicate was found
+                if (foundDuplicate)
+                {
+                    console.log("omitted duplicate event, please fix in Songkick database! " + JSON.stringify(eventA));
+                } else
+                {
+                    uniqueArray.push(eventA);
+                }
+            });
+
+            // format event entries
+            uniqueArray.forEach(function (event) {
 
                 var eventName;
 
@@ -346,6 +367,15 @@
          */
         function loadSongkickEvents()
         {
+            // var dummy = [{"isFestival": false, "festivalName": null, "venue": "Kulturcafe Schlachthaus", "date": "2019-03-23", "city": "Dornbirn", "country": "Austria"}, {"isFestival": true, "festivalName": "Iron Force Festival", "venue": "Senkel", "date": "2019-04-05", "city": "Stans", "country": "Switzerland"}, {"isFestival": true, "festivalName": "No Playback Festival", "venue": "Festhalle Durlach", "date": "2019-04-06", "city": "Karlsruhe", "country": "Germany"}, {"isFestival": true, "festivalName": "Heavy Stage Night 2", "venue": "Jugendzentrum Westwerk 141", "date": "2019-04-13", "city": "Osnabr\u00fcck", "country": "Germany"}, {"isFestival": true, "festivalName": "2. Heavy Stage Night", "venue": "Jz Westwerk 141", "date": "2019-04-13", "city": "Osnabr\u00fcck", "country": "Germany"}, {"isFestival": true, "festivalName": "Underground Remains Open Air", "venue": "Haus Der Kulturen", "date": "2019-06-08", "city": "G\u00f6ttingen", "country": "Germany"}, {
+            //     "isFestival": true,
+            //     "festivalName": "Burgbrand Open Air",
+            //     "venue": "Unknown venue",
+            //     "date": "2019-08-22",
+            //     "city": "Eisenach",
+            //     "country": "Germany"
+            // }, {"isFestival": true, "festivalName": "Trveheim Festival", "venue": "Hausler Hof", "date": "2019-08-23", "city": "Munich", "country": "Germany"}, {"isFestival": true, "festivalName": "Burgbrand Open Air", "venue": "Unknown venue", "date": "2019-08-24", "city": "Eisenach", "country": "Germany"}, {"isFestival": true, "festivalName": "HARD Summer Music Festival", "venue": "Unknown venue", "date": "2019-09-07", "city": "Straubing", "country": "Germany"}, {"isFestival": true, "festivalName": "Hard Summer Festival 2019", "venue": "Hard Summer Festival Falkenfels", "date": "2019-09-07", "city": "Straubing", "country": "Germany"}];
+
             $.post(
                 'get-songkick-data.php',
                 function (result) {
@@ -461,7 +491,7 @@
     <!-- tour dates heading -->
     <div align="center"
          class="heading">
-        upcoming shows
+        upcoming shows <span class="med-font">(powered by <a href="http://www.songkick.com/artists/9780774-stallion"><u>songkick.com</u></a>)</span>
     </div>
 
     <!-- tour dates content -->
