@@ -80,6 +80,14 @@ a:active {
     flex-basis: 0;
 }
 
+.social-media-link-outer-container {
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center
+}
+
 .social-media-link-container {
 
     display: flex;
