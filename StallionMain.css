@@ -60,6 +60,20 @@ a:active {
     height: 300px
 }
 
+.optima-logo {
+
+    width: 80px;
+    height: 80px
+    padding: 16px;
+}
+
+.mercuriall-logo {
+
+    width: 248px;
+    height: 36px;
+    padding: 16px;
+}
+
 .heading {
 
     line-height: 50px;
@@ -93,6 +107,19 @@ a:active {
     display: flex;
     flex-flow: row;
     justify-content: center;
+    align-items: center
+}
+
+.endorser-link-header {
+
+    padding-top: 36px;
+}
+
+.endorser-link-container {
+
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
     align-items: center
 }
 
