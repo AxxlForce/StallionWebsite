@@ -363,7 +363,7 @@
         }
 
         /**
-         * get event from google calendar via PHP and service account
+         * get events from Songkick API
          */
         function loadSongkickEvents()
         {
@@ -397,16 +397,14 @@
 <div class="container">
 
     <!-- header -->
-    <h1 align="center"
-        class="title">
+    <h1 class="title">
         Stallion (Official)
     </h1>
 
     <div class="upper-row">
 
         <!-- links -->
-        <div class="unified-flex-size med-font left-column"
-             align="center">
+        <div class="unified-flex-size med-font left-column">
 
             <div>
                 <div class="heading">Band Information</div>
@@ -428,67 +426,41 @@
         </div>
 
         <!-- band photo -->
-        <div class="unified-flex-size"
-             align="center">
+        <div class="unified-flex-size band-photo-container">
             <a href="http://www.metal-archives.com/bands/Stallion/3540367297">
-                <img src="img/title.jpg" class="band-photo">
+                <img src="img/sot-cover_352x352.jpg" class="band-photo" alt="band photo">
             </a>
-        </div>
-
-        <!--social media (colored icons, not used atm)-->
-        <div class="unified-flex-size social-media-link-container" style="display: none">
-
-            <a href="http://www.heavymetalstallion.com/Facebook"
-               class="social-media-link">
-                <img src="img/facebook.svg" alt="Facebook">
-            </a>
-
-            <a href="http://www.instagram.com/heavymetalstallion"
-               class="social-media-link">
-                <img src="img/instagram.svg" alt="Instagram">
-            </a>
-
-            <a href="http://www.heavymetalstallion.com/Youtube"
-               class="social-media-link">
-                <img src="img/youtube.svg" alt="YouTube">
-            </a>
-
-            <a href="http://open.spotify.com/artist/4H7l564NLNANlnd5rIrJjy"
-               class="social-media-link">
-                <img src="img/spotify.svg" alt="Spotify">
-            </a>
-
         </div>
 
         <div class="unified-flex-size social-media-link-outer-container">
 
-            <!--social media (monochrome icons, used atm)-->
+            <!--social media (colored icons, not used atm)-->
             <div class="social-media-link-container">
 
                 <a href="http://www.heavymetalstallion.com/Facebook"
-                   class="social-media-link-mono-social-icons">
-                    <span class='symbol'>circlefacebook</span>
+                   class="social-media-link">
+                    <img src="img/facebook.svg" alt="Facebook">
                 </a>
 
                 <a href="http://www.instagram.com/heavymetalstallion"
-                   class="social-media-link-mono-social-icons">
-                    <span class='symbol'>circleinstagram</span>
+                   class="social-media-link">
+                    <img src="img/instagram.svg" alt="Instagram">
                 </a>
 
                 <a href="http://www.heavymetalstallion.com/Youtube"
-                   class="social-media-link-mono-social-icons">
-                    <span class='symbol'>circleyoutube</span>
+                   class="social-media-link">
+                    <img src="img/youtube.svg" alt="YouTube">
                 </a>
 
                 <a href="http://open.spotify.com/artist/4H7l564NLNANlnd5rIrJjy"
-                   class="social-media-link-mono-social-icons">
-                    <span class='symbol'>circlespotify</span>
+                   class="social-media-link">
+                    <img src="img/spotify.svg" alt="Spotify">
                 </a>
 
             </div>
 
             <div class="endorser-link-header">
-                Stallion is endorsed by 
+                Stallion is endorsed by
             </div>
 
             <div class=endorser-link-container>
@@ -497,29 +469,72 @@
                     <img src="img/optima-sign-logo.png" class="optima-logo" alt="optima strings">
                 </a>
 
-                <a href="http://mercuriall.com/">                
-                    <img src="img/mercuriall_logo.png" class="mercuriall-logo" alt="mercuriall">
+                <a href="http://mercuriall.com/">
+                    <img src="img/Only_logo_white.png" class="mercuriall-logo" alt="mercuriall">
                 </a>
 
             </div>
 
         </div>
 
+        <!--        <div class="unified-flex-size social-media-link-outer-container">-->
+
+        <!--            &lt;!&ndash;social media (monochrome icons, used atm)&ndash;&gt;-->
+        <!--            <div class="social-media-link-container">-->
+
+        <!--                <a href="http://www.heavymetalstallion.com/Facebook"-->
+        <!--                   class="social-media-link-mono-social-icons">-->
+        <!--                    <span class='symbol'>circlefacebook</span>-->
+        <!--                </a>-->
+
+        <!--                <a href="http://www.instagram.com/heavymetalstallion"-->
+        <!--                   class="social-media-link-mono-social-icons">-->
+        <!--                    <span class='symbol'>circleinstagram</span>-->
+        <!--                </a>-->
+
+        <!--                <a href="http://www.heavymetalstallion.com/Youtube"-->
+        <!--                   class="social-media-link-mono-social-icons">-->
+        <!--                    <span class='symbol'>circleyoutube</span>-->
+        <!--                </a>-->
+
+        <!--                <a href="http://open.spotify.com/artist/4H7l564NLNANlnd5rIrJjy"-->
+        <!--                   class="social-media-link-mono-social-icons">-->
+        <!--                    <span class='symbol'>circlespotify</span>-->
+        <!--                </a>-->
+
+        <!--            </div>-->
+
+        <!--            <div class="endorser-link-header">-->
+        <!--                Stallion is endorsed by-->
+        <!--            </div>-->
+
+        <!--            <div class=endorser-link-container>-->
+
+        <!--                <a href="http://optima-strings.com">-->
+        <!--                    <img src="img/optima-sign-logo.png" class="optima-logo" alt="optima strings">-->
+        <!--                </a>-->
+
+        <!--                <a href="http://mercuriall.com/">-->
+        <!--                    <img src="img/mercuriall_logo.png" class="mercuriall-logo" alt="mercuriall">-->
+        <!--                </a>-->
+
+        <!--            </div>-->
+
+        <!--        </div>-->
+
     </div>
 
     <br>
 
     <!-- tour dates heading -->
-    <div align="center"
-         class="heading">
+    <div class="heading">
         upcoming shows <span class="med-font">(powered by <a href="http://www.songkick.com/artists/9780774-stallion"><u>songkick.com</u></a>)</span>
     </div>
 
     <!-- tour dates content -->
-    <div align="center">
+    <div>
 
-        <div align="center"
-             id="tourDateContainer"
+        <div id="tourDateContainer"
              class="tour-dates">
             loading tour dates...
         </div>

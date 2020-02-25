@@ -1,9 +1,0 @@
-<?php
-
-$filename = "counter.dat";
-
-$handle = fopen($filename, "r");
-echo "The download button has been clicked " . fread($handle, filesize($filename)) . " times!";
-fclose($handle);
-
-?>

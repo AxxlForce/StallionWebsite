@@ -1,31 +1,40 @@
-/* basic styling */
+/*****************************************************************
+ basic styling
+ ****************************************************************/
 body {
 
     font-family: 'Ubuntu', cursive;
-    color: rgb(254, 0, 0);
-    background-color: white;
+    color: ivory;
+    background-color: black;
 }
 
-/* font color overwrites */
+/*****************************************************************
+ link style overwrites
+ ****************************************************************/
 a:link {
-    color: rgb(254, 0, 0);
-    text-decoration: none
+
+    color: ivory;
+    text-decoration: none /* removes underline from links */
 }
 
 a:visited {
-    color: rgb(254, 0, 0);
+
+    color: ivory;
 }
 
 a:hover {
-    color: rgb(254, 0, 0);
+
+    color: ivory;
 }
 
 a:focus {
-    color: rgb(254, 0, 0);
+
+    color: ivory;
 }
 
 a:active {
-    color: rgb(254, 0, 0);
+
+    color: ivory;
 }
 
 /*****************************************************************
@@ -37,6 +46,7 @@ a:active {
     line-height: 48px;
     font-weight: bold;
     font-size: 48px;
+    text-align: center;
 }
 
 .med-font {
@@ -56,22 +66,25 @@ a:active {
 
     padding-top: 32px;
     padding-bottom: 32px;
-    width: 300px;
-    height: 300px
 }
 
 .optima-logo {
 
     width: 80px;
-    height: 80px
-    padding: 16px;
+    height: 80px;
+
+    padding: 4px;
+    margin: 12px;
+
+    border-radius: 4px;
+    background-color: white;
 }
 
 .mercuriall-logo {
 
-    width: 248px;
-    height: 36px;
-    padding: 16px;
+    width: 260px;
+
+    margin: 16px;
 }
 
 .heading {
@@ -79,13 +92,22 @@ a:active {
     line-height: 50px;
     font-weight: bold;
     font-size: 30px;
+    text-align: center;
 }
 
 .left-column {
 
     display: flex;
     flex-flow: column;
-    justify-content: space-around
+    justify-content: space-around;
+    text-align: center;
+}
+
+.band-photo-container {
+
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
 }
 
 .unified-flex-size {
@@ -126,8 +148,8 @@ a:active {
 .social-media-link {
 
     padding: 8px;
-    width: 64px;
-    height: 64px;
+    width: 48px;
+    height: 48px;
 }
 
 .social-media-link-mono-social-icons {
@@ -136,7 +158,13 @@ a:active {
     font-size: 64px;
 }
 
-/*tour date container*/
+/*****************************************************************
+ tour date container stuff below
+ ****************************************************************/
+.tour-dates {
+
+    text-align: center;
+}
 
 .year {
 
@@ -160,12 +188,4 @@ a:active {
 
     font-size: 30px;
     font-weight: bolder;
-}
-
-@media (max-width: 800px) {
-
-    .tour-dates {
-
-        text-align: center;
-    }
 }
