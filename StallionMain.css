@@ -3,7 +3,7 @@
  ****************************************************************/
 body {
 
-    font-family: 'Ubuntu';
+    font-family: 'ubunturegular';
     color: ivory;
     background-color: black;
 }
@@ -42,7 +42,7 @@ a:active {
  ****************************************************************/
 .title {
 
-    font-family: 'Stardos Stencil', cursive;
+    font-family: 'stardos_stencilbold', cursive;
     line-height: 48px;
     font-weight: bold;
     font-size: 48px;
